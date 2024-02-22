@@ -34,7 +34,7 @@ public class NavegadorEstelar {
         }
     }
 
-
+    // Método para multiplicar dos matrices
     public static int[][] multiplicarMatrices(int[][] a, int[][] b) {
         int filasA = a.length;
         int columnasA = a[0].length;
