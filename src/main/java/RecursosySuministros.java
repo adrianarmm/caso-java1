@@ -46,15 +46,7 @@ public class RecursosySuministros {
     double porcentajeComida = (consumo[1] / capacidadComida) * 100;
     double porcentajeOxigeno = (consumo[2] / capacidadOxigeno) * 100;
 
-    if (porcentajeAgua < UMBRAL_SEGURO) {
-        System.out.println("ALERTA: Consumo de agua al " + porcentajeAgua + "%");
-    }
-    if (porcentajeComida < UMBRAL_SEGURO) {
-        System.out.println("ALERTA: Consumo de comida al " + porcentajeComida + "%");
-    }
-    if (porcentajeOxigeno < UMBRAL_SEGURO) {
-        System.out.println("ALERTA: Consumo de oxígeno al " + porcentajeOxigeno + "%");
-
+    i
 }
 
 private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
