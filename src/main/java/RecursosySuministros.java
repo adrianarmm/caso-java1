@@ -17,6 +17,13 @@ public class RecursosySuministros {
         double[] consumoTotal = calcularConsumo(dias, personas);
 
 
+        System.out.println("Consumo total para " + personas + " personas en " + dias + " días:");
+        System.out.println("Agua: " + consumoTotal[0] + " litros");
+        System.out.println("Comida: " + consumoTotal[1] + " kg");
+        System.out.println("Oxígeno: " + consumoTotal[2] + " m^3");
 
 
-}
+
+
+
+    }
