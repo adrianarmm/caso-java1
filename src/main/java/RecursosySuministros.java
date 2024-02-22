@@ -22,8 +22,12 @@ public class RecursosySuministros {
         System.out.println("Comida: " + consumoTotal[1] + " kg");
         System.out.println("Oxígeno: " + consumoTotal[2] + " m^3");
 
-
-
+        verificarAlerta(consumoTotal, dias);
+        System.out.println("Estadísticas de consumo diario por persona:");
+        double[] estadisticas = calcularEstadisticas(consumoTotal, dias, personas);
+        System.out.println("Media de consumo diario: Agua = " + estadisticas[0] + " litros, Comida = " + estadisticas[1] + " kg, Oxígeno = " + estadisticas[2] + " m^3");
+        // Para mínimo y máximo, puedes expandir este sistema agregando más datos históricos o simulaciones.
+    }
 
 
     }
