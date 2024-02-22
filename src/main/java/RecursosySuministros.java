@@ -12,7 +12,6 @@ public class RecursosySuministros {
 
     public static void main(String[] args) {
         int dias = 5; // Ejemplo de múltiplo de 5 días
-
         int personas = 4;
         double[] consumoTotal = calcularConsumo(dias, personas);
 
@@ -23,6 +22,7 @@ public class RecursosySuministros {
         System.out.println("Oxígeno: " + consumoTotal[2] + " m^3");
 
         verificarAlerta(consumoTotal, dias);
+
         System.out.println("Estadísticas de consumo diario por persona:");
         double[] estadisticas = calcularEstadisticas(consumoTotal, dias, personas);
         System.out.println("Media de consumo diario: Agua = " + estadisticas[0] + " litros, Comida = " + estadisticas[1] + " kg, Oxígeno = " + estadisticas[2] + " m^3");
