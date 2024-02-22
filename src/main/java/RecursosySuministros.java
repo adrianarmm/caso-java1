@@ -35,5 +35,9 @@ public class RecursosySuministros {
         double oxigeno = CONSUMO_OXIGENO_DIA * dias * personas;
         return new double[]{agua, comida, oxigeno};
     }
-
+    private static void verificarAlerta(double[] consumo, int dias) {
+        // Suponiendo capacidades de recursos (ejemplo simplificado)
+        double capacidadAgua = 500; // 500 litros
+        double capacidadComida = 200; // 200 kg
+        double capacidadOxigeno = 150; // 150 m^3
     }
