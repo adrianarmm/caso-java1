@@ -10,3 +10,4 @@ public class PlanificadordeTareas {
                 {3, 3, 1}  // Tareas asignadas a Charlie
         };
 
+    }
