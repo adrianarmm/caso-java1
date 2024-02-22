@@ -25,4 +25,12 @@ public class NavegadorEstelar {
         // Multiplicación de matrices para optimizar rutas y recursos
         int[][] optimizacion = multiplicarMatrices(conexiones, costos);
 
+        System.out.println("Matriz de Optimización de Rutas y Recursos:");
+        for (int i = 0; i < optimizacion.length; i++) {
+            for (int j = 0; j < optimizacion[i].length; j++) {
+                System.out.print(optimizacion[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
