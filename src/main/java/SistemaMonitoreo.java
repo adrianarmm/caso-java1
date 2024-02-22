@@ -32,3 +32,11 @@ public class SistemaMonitoreo {
             System.out.println("Temperatura dentro de rango seguro.");
         }
     }
+
+    private static void monitorearPresion(double presion) {
+        if (presion < 90 || presion > 110) { // Rango seguro en kPa
+            System.out.println("Alerta: Presión fuera de rango seguro. Sugerencia: Verificar sellado de la estación.");
+        } else {
+            System.out.println("Presión dentro de rango seguro.");
+        }
+    }
