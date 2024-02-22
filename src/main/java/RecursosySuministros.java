@@ -59,3 +59,8 @@ public class RecursosySuministros {
 
 private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
     double mediaAguaporPersona = consumo[0] / (dias * personas);
+    double mediaComidaporPersona = consumo[1] / (dias * personas);
+    double mediaOxigenoporPersona = consumo[2] / (dias * personas);
+    return new double[]{mediaAguaporPersona, mediaComidaporPersona, mediaOxigenoporPersona};
+}
+}
