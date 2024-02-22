@@ -25,4 +25,10 @@ public class SistemaMonitoreo {
         }
     }
 
-
+    private static void monitorearTemperatura(double temperatura) {
+        if (temperatura < 0 || temperatura > 30) { // Rango seguro entre 0 y 30 grados Celsius
+            System.out.println("Alerta: Temperatura fuera de rango seguro. Sugerencia: Ajustar sistemas de soporte vital.");
+        } else {
+            System.out.println("Temperatura dentro de rango seguro.");
+        }
+    }
