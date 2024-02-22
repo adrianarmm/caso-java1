@@ -59,5 +59,6 @@ public class RecursosySuministros {
             return new double[]{mediaAgua, mediaComida, mediaOxigeno};
         }
     }
+}
 
 
