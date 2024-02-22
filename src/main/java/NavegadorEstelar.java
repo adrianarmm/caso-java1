@@ -34,5 +34,13 @@ public class NavegadorEstelar {
         }
     }
 
+    / Función para multiplicar matrices
+    public static int[][] multiplicarMatrices(int[][] a, int[][] b) {
+        int filasA = a.length;
+        int columnasA = a[0].length;
+        int columnasB = b[0].length;
+
+        int[][] resultado = new int[filasA][columnasB];
+
 
 
