@@ -23,3 +23,11 @@ public class PlanificadordeTareas {
             }
         }
     }
+
+    private static void calcularCargaTrabajoOptima(String[] miembros, int[][] tareasAsignadas, int[] horasDisponibles) {
+        System.out.println("\nCarga de Trabajo Óptima:");
+        for (int i = 0; i < miembros.length; i++) {
+            int cargaTrabajo = productoEscalar(tareasAsignadas[i], horasDisponibles);
+            System.out.println(miembros[i] + ": " + cargaTrabajo + " unidades de trabajo.");
+        }
+    }
