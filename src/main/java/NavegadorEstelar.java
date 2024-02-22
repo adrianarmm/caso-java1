@@ -7,4 +7,11 @@ public class NavegadorEstelar {
                 {2, 0, 1, 1},
                 {1, 1, 1, 0}
         };
-}
+// Matrices para demostrar la optimización de rutas (simplificadas)
+        int[][] conexiones = {
+                {0, 1, 1, 0},
+                {1, 0, 0, 1},
+                {1, 0, 0, 1},
+                {0, 1, 1, 0}
+        };
+
