@@ -33,14 +33,4 @@ public class RecursosySuministros {
             return new double[]{agua, comida, oxigeno};
         }
 
-        private static void verificarAlerta(double[] consumo) {
-            double capacidadAgua = 500; // 500 litros
-            double capacidadComida = 200; // 200 kg
-            double capacidadOxigeno = 150; // 150 m^3
 
-            double porcentajeAgua = (consumo[0] / capacidadAgua) * 100;
-            double porcentajeComida = (consumo[1] / capacidadComida) * 100;
-            double porcentajeOxigeno = (consumo[2] / capacidadOxigeno) * 100;
-
-            if (porcentajeAgua < UMBRAL_SEGURO || porcentajeComida < UMBRAL_SEGURO || porcentajeOxigeno < UMBRAL_SEGURO) {
-                System.out.println("Alerta: Los nive
