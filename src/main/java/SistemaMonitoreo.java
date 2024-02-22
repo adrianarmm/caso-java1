@@ -12,4 +12,6 @@ public class SistemaMonitoreo {
 
         monitorearPresion(101.325); // Valor seguro
         monitorearPresion(50.5); // Valor extremo
+
+        listarPrimerosNPrimos(5); // Listar los primeros 5 números primos
 }
