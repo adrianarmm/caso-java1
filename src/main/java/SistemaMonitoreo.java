@@ -61,4 +61,15 @@ public class SistemaMonitoreo {
         }
         return true;
     }
+    private static List<Integer> descomponerEnFactoresPrimos(int numero) {
+        List<Integer> factores = new ArrayList<>();
+        for (int i = 2; i <= numero; i++) {
+            while (numero % i == 0) {
+                factores.add(i);
+                numero /= i;
+            }
+        }
+        return factores;
+    }
+}
 
