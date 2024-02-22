@@ -14,3 +14,12 @@ public class PlanificadordeTareas {
         int[] horasDisponibles = {5, 5, 5}; // Horas disponibles por miembro
         calcularCargaTrabajoOptima(miembros, tareasAsignadas, horasDisponibles);
     }
+    private static void visualizarTablasDeTareas(String[] miembros, int[][] tareasAsignadas) {
+        System.out.println("Distribución de Tareas:");
+        for (int i = 0; i < miembros.length; i++) {
+            System.out.println(miembros[i] + "'s Tareas:");
+            for (int j = 0; j < tareasAsignadas[i].length; j++) {
+                System.out.println("Tarea " + (j + 1) + ": " + tareasAsignadas[i][j]);
+            }
+        }
+    }
