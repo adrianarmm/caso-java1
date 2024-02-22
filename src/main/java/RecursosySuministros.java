@@ -41,3 +41,7 @@ public class RecursosySuministros {
         double capacidadComida = 200; // 200 kg
         double capacidadOxigeno = 150; // 150 m^3
     }
+
+    double porcentajeAgua = (consumo[0] / capacidadAgua) * 100;
+    double porcentajeComida = (consumo[1] / capacidadComida) * 100;
+    double porcentajeOxigeno = (consumo[2] / capacidadOxigeno) * 100;
