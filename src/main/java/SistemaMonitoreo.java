@@ -40,3 +40,15 @@ public class SistemaMonitoreo {
             System.out.println("Presión dentro de rango seguro.");
         }
     }
+
+    private static void listarPrimerosNPrimos(int n) {
+        List<Integer> primos = new ArrayList<>();
+        int numero = 2;
+        while (primos.size() < n) {
+            if (esPrimo(numero)) {
+                primos.add(numero);
+                System.out.println(numero + " es un número primo.");
+            }
+            numero++;
+        }
+    }
