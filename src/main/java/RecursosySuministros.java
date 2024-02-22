@@ -12,4 +12,11 @@ public class RecursosySuministros {
 
     public static void main(String[] args) {
         int dias = 5; // Ejemplo de múltiplo de 5 días
+
+        int personas = 4;
+        double[] consumoTotal = calcularConsumo(dias, personas);
+
+
+
+
 }
