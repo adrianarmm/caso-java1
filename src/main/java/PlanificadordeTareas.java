@@ -9,3 +9,4 @@ public class PlanificadordeTareas {
                 {1, 4, 3}, // Tareas asignadas a Bob
                 {3, 3, 1}  // Tareas asignadas a Charlie
         };
+        visualizarTablasDeTareas(miembros, tareasAsignadas);
