@@ -29,5 +29,11 @@ public class RecursosySuministros {
         // Para mínimo y máximo, puedes expandir este sistema agregando más datos históricos o simulaciones.
     }
 
+    private static double[] calcularConsumo(int dias, int personas) {
+        double agua = CONSUMO_AGUA_DIA * dias * personas;
+        double comida = CONSUMO_COMIDA_DIA * dias * personas;
+        double oxigeno = CONSUMO_OXIGENO_DIA * dias * personas;
+        return new double[]{agua, comida, oxigeno};
+    }
 
     }
