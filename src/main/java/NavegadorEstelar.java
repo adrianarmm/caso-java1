@@ -15,3 +15,10 @@ public class NavegadorEstelar {
                 {0, 1, 1, 0}
         };
 
+        int[][] costos = {
+                {1, 2, 3, 4},
+                {2, 1, 4, 3},
+                {3, 4, 1, 2},
+                {4, 3, 2, 1}
+        };
+
