@@ -42,21 +42,22 @@ public class RecursosySuministros {
         double capacidadOxigeno = 150; // 150 m^3
     }
 
+    private double consumoTotal = 0;
     double porcentajeAgua = (consumo[0] / capacidadAgua) * 100;
     double porcentajeComida = (consumo[1] / capacidadComida) * 100;
     double porcentajeOxigeno = (consumo[2] / capacidadOxigeno) * 100;
 
-    if (porcentajeAgua < UMBRAL_SEGURO || porcentajeComida < UMBRAL_SEGURO || porcentajeOxigeno < UMBRAL_SEGURO) {
+if (porcentajeAgua < UMBRAL_SEGURO || porcentajeComida < UMBRAL_SEGURO || porcentajeOxigeno < UMBRAL_SEGURO) {
         System.out.println("Alerta: Los niveles de recursos están por debajo del umbral seguro.");
     } else {
         System.out.println("Los niveles de recursos son seguros.");
     }
 }
 
-private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
-    double mediaAguaporPersona = consumo[0] / (dias * personas);
-    double mediaComidaporPersona = consumo[1] / (dias * personas);
-    double mediaOxigenoporPersona = consumo[2] / (dias * personas);
-    return new double[]{mediaAguaporPersona, mediaComidaporPersona, mediaOxigenoporPersona};
+private static double[] calcularEstadisticas(double[] consumoTotal, int dias, int personas) {
+    double mediaAgua = consumoTotal[0] / (dias * personas);
+    double mediaComida = consumoTotal[1] / (dias * personas);
+    double mediaOxigeno = consumoTotal[2] / (dias * personas);
+    return new double[]{mediaAgua, mediaComida, mediaOxigeno};
 }
 }
