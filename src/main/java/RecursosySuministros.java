@@ -54,4 +54,4 @@ public class RecursosySuministros {
 }
 
 private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
-    double mediaAgua
+    double mediaAguaporPersona = consumo[0] / (dias * personas);
