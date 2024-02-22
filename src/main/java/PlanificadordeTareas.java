@@ -10,3 +10,7 @@ public class PlanificadordeTareas {
                 {3, 3, 1}  // Tareas asignadas a Charlie
         };
         visualizarTablasDeTareas(miembros, tareasAsignadas);
+
+        int[] horasDisponibles = {5, 5, 5}; // Horas disponibles por miembro
+        calcularCargaTrabajoOptima(miembros, tareasAsignadas, horasDisponibles);
+    }
