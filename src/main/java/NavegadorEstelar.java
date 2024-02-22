@@ -22,3 +22,7 @@ public class NavegadorEstelar {
                 {4, 3, 2, 1}
         };
 
+        // Multiplicación de matrices para optimizar rutas y recursos
+        int[][] optimizacion = multiplicarMatrices(conexiones, costos);
+        visualizarMatriz(optimizacion);
+
