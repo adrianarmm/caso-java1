@@ -31,3 +31,11 @@ public class PlanificadordeTareas {
             System.out.println(miembros[i] + ": " + cargaTrabajo + " unidades de trabajo.");
         }
     }
+    private static int productoEscalar(int[] tareas, int[] horas) {
+        int producto = 0;
+        for (int i = 0; i < tareas.length; i++) {
+            producto += tareas[i] * horas[i];
+        }
+        return producto;
+    }
+}
