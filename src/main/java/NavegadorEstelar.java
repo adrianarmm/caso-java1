@@ -42,5 +42,16 @@ public class NavegadorEstelar {
 
         int[][] resultado = new int[filasA][columnasB];
 
+        for (int i = 0; i < filasA; i++) {
+            for (int j = 0; j < columnasB; j++) {
+                for (int k = 0; k < columnasA; k++) {
+                    resultado[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+
+        return resultado;
+    }
+}
 
 
