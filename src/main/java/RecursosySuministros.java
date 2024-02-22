@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RecursosySuministros {
+    public class RecursosySuministros {
         // Recursos y suministros para una expedición espacial
         private static final double CONSUMO_AGUA_DIA = 1.5; // 1.5 litros
         private static final double CONSUMO_COMIDA_DIA = 0.5; // 0.5 kg
@@ -32,5 +33,31 @@ public class RecursosySuministros {
             double oxigeno = CONSUMO_OXIGENO_DIA * dias * personas;
             return new double[]{agua, comida, oxigeno};
         }
+
+        private static void verificarAlerta(double[] consumo) {
+            double capacidadAgua = 500; // 500 litros
+            double capacidadComida = 200; // 200 kg
+            double capacidadOxigeno = 150; // 150 m^3
+
+            double porcentajeAgua = (consumo[0] / capacidadAgua) * 100;
+            double porcentajeComida = (consumo[1] / capacidadComida) * 100;
+            double porcentajeOxigeno = (consumo[2] / capacidadOxigeno) * 100;
+
+            if (porcentajeAgua < UMBRAL_SEGURO || porcentajeComida < UMBRAL_SEGURO || porcentajeOxigeno < UMBRAL_SEGURO) {
+                System.out.println("Alerta: Los niveles de recursos están por debajo del umbral seguro.");
+            } else {
+                System.out.println("Los niveles de recursos son seguros.");
+            }
+        }
+
+        private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
+            // Corrección: Asegurar que el cálculo se hace correctamente
+            double mediaAgua = consumo[0] / (dias * personas);
+            double mediaComida = consumo[1] / (dias * personas);
+            double mediaOxigeno = consumo[2] / (dias * personas);
+            // Retornar los resultados en un nuevo array
+            return new double[]{mediaAgua, mediaComida, mediaOxigeno};
+        }
+    }
 
 
