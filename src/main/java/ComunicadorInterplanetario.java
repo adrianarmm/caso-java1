@@ -1,33 +1,36 @@
 public class ComunicadorInterplanetario {
 
-    public static void main(String[] args) {
-        String mensaje = "La Tierra es planeta más denso del Sistema Solar.";
+        public static void main(String[] args) {
+            String mensaje = "La Tierra es planeta más denso del Sistema Solar";
 
-        System.out.println("Mensaje Original: " + mensaje);
-        System.out.println("Cantidad de vocales: " + contarVocales(mensaje));
-        System.out.println("Mensaje Invertido: " + invertirMensaje(mensaje));
-        System.out.println("¿Es Palíndromo?: " + esPalindromo(mensaje));
+            System.out.println("Mensaje Original: " + mensaje);
+            System.out.println("Cantidad de vocales: " + contarVocales(mensaje));
+            System.out.println("Mensaje Invertido: " + invertirMensaje(mensaje));
+            System.out.println("¿Es Palíndromo? (ignorando espacios, mayúsculas y signos de puntuación): " + esPalindromo(mensaje));
+        }
+
+
+        public static int contarVocales(String mensaje) {
+            int contador = 0;
+            String mensajeMinuscula = mensaje.toLowerCase();
+            for (int i = 0; i < mensajeMinuscula.length(); i++) {
+                char c = mensajeMinuscula.charAt(i);
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
+        // Función para invertir un mensaje
+        public static String invertirMensaje(String mensaje) {
+            return new StringBuilder(mensaje).reverse().toString();
+        }
+
+        // Función para verificar si un mensaje es palíndromo
+        public static boolean esPalindromo(String mensaje) {
+            String mensajeLimpio = mensaje.toLowerCase().replaceAll("[\\s+.,!¡¿?@]", "");
+            String mensajeInvertido = new StringBuilder(mensajeLimpio).reverse().toString();
+            return mensajeLimpio.equals(mensajeInvertido);
+        }
     }
-}
-public static int contarVocales(String mensaje) {
-    int contador = 0;
-int contador = 0;
-for (char c : mensaje.toLowerCase().toCharArray())
-{
-    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-contador++;
-        }
-        }
-        return contador;
-}
-
-public static String invertirMensaje(String mensaje) {
-    return new StringBuilder(mensaje).reverse().toString();
-}
-
-public static boolean esPalindromo(String mensaje) {
-    String mensajeLimpio = mensaje.toLowerCase().replaceAll("[\\s+]", ""); // Elimina todos los espacios
-    String mensajeInvertido = new StringBuilder(mensajeLimpio).reverse().toString();
-    return mensajeLimpio.equals(mensajeInvertido);
-}
-}
