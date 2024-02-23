@@ -9,7 +9,8 @@ public class ComunicadorInterplanetario {
         System.out.println("¿Es Palíndromo?: " + esPalindromo(mensaje));
     }
 }
-
+public static int contarVocales(String mensaje) {
+    int contador = 0;
 int contador = 0;
 for (char c : mensaje.toLowerCase().toCharArray())
 {
