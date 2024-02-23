@@ -24,7 +24,6 @@ contador++;
 public static String invertirMensaje(String mensaje) {
     return new StringBuilder(mensaje).reverse().toString();
 }
-
 public static boolean esPalindromo(String mensaje) {
     String mensajeLimpio = mensaje.toLowerCase().replaceAll("\\s+", "");
     return mensajeLimpio.equals(new StringBuilder(mensajeLimpio).reverse().toString());
