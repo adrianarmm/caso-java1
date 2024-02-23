@@ -10,10 +10,11 @@ public class ComunicadorInterplanetario {
 }
 
 int contador = 0;
-        for (char c : mensaje.toLowerCase().toCharArray()) {
-        if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+for (char c : mensaje.toLowerCase().toCharArray())
+{
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
 contador++;
         }
         }
         return contador;
-    }
+}
