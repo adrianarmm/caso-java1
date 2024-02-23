@@ -22,12 +22,10 @@ public class ComunicadorInterplanetario {
             return contador;
         }
 
-        // Función para invertir un mensaje
         public static String invertirMensaje(String mensaje) {
             return new StringBuilder(mensaje).reverse().toString();
         }
 
-        // Función para verificar si un mensaje es palíndromo
         public static boolean esPalindromo(String mensaje) {
             String mensajeLimpio = mensaje.toLowerCase().replaceAll("[\\s+.,!¡¿?@]", "");
             String mensajeInvertido = new StringBuilder(mensajeLimpio).reverse().toString();
