@@ -18,3 +18,7 @@ contador++;
         }
         return contador;
 }
+
+public static String invertirMensaje(String mensaje) {
+    return new StringBuilder(mensaje).reverse().toString();
+}
