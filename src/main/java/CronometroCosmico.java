@@ -32,4 +32,8 @@ public class CronometroCosmico {
         System.out.println("Mayor valor para float: " + Float.MAX_VALUE);
         System.out.println("Mayor valor para double: " + Double.MAX_VALUE);
     }
+
+    public static int calcularSegundosEnUnAñoTerrestre() {
+        return (int) (SEGUNDOS_EN_MINUTO * MINUTOS_EN_HORA * HORAS_EN_DIA * DIAS_EN_AÑO);
+    }
 }
