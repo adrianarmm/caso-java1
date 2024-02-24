@@ -14,5 +14,33 @@ public class conjunto {
         System.out.print("Seleccione una opción: ");
         int opcion = scanner.nextInt();
 
+        switch (opcion) {
+            case 1:
+                CronometroCosmico.main(null);
+                break;
+            case 2:
+                RecursosySuministros.main(null);
+                break;
+            case 3:
+                SistemaMonitoreo.main(null);
+                break;
+            case 4:
+                PlanificadordeTareas.main(null);
+                break;
+            case 5:
+                NavegadorEstelar.main(null);
+                break;
+            case 6:
+                ComunicadorInterplanetario.main(null);
+                break;
+            case 7:
+                System.out.println("Saliendo del programa...");
+                return;
+            default:
+                System.out.println("Opción no válida. Por favor, intente de nuevo.");
 
+        }
+    }
 }
+
+
