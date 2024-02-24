@@ -35,7 +35,8 @@ public class conjunto {
                 break;
             case 7:
                 System.out.println("Saliendo del programa...");
-                return;
+                System.exit(0);
+
             default:
                 System.out.println("Opción no válida. Por favor, intente de nuevo.");
 
