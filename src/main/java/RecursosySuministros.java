@@ -17,7 +17,7 @@ public class RecursosySuministros {
             System.out.println("Comida: " + consumoTotal[1] + " kg");
             System.out.println("Oxígeno: " + consumoTotal[2] + " m^3");
 
-            verificarAlerta(consumoTotal);
+            verificarAlerta(consumoTotal, 500, 200, 150);
 
             double[] estadisticas = calcularEstadisticas(consumoTotal, dias, personas);
             System.out.println("Estadísticas de consumo diario por persona:");
@@ -31,7 +31,7 @@ public class RecursosySuministros {
             return new double[]{agua, comida, oxigeno};
         }
 
-        private static void verificarAlerta(double[] consumo) {
+        private static void verificarAlerta(double[] consumo, int i, int i1, int i2) {
             double capacidadAgua = 500; // 500 litros
             double capacidadComida = 200; // 200 kg
             double capacidadOxigeno = 150; // 150 m^3

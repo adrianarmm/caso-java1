@@ -36,4 +36,8 @@ public class CronometroCosmico {
     public static int calcularSegundosEnUnAñoTerrestre() {
         return (int) (SEGUNDOS_EN_MINUTO * MINUTOS_EN_HORA * HORAS_EN_DIA * DIAS_EN_AÑO);
     }
+
+    public static double calcularAñosPlaneta(int i) {
+        return i / DIAS_POR_AÑO_PLANETA;
+    }
 }
