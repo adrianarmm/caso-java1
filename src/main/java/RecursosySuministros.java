@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class RecursosySuministros {
         // Recursos y suministros para una expedición espacial
