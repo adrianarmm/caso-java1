@@ -1,6 +1,7 @@
 
 // implementacion de pruebas unitarias con JUnit
 import org.junit.jupiter.api.Test;
+import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,7 +68,7 @@ class SistemaMonitoreoTest {
 
     @Test
     void testListarPrimerosNPrimos() {
-        assertEquals(List.of(2, 3, 5, 7, 11), SistemaMonitoreo.listarPrimerosNPrimos(5));
+        assertEquals(Arrays.asList(2, 3, 5, 7, 11), SistemaMonitoreo.listarPrimerosNPrimos(5));
     }
 
     @Test
@@ -153,33 +154,37 @@ class NavegadorEstelarTest {
 
 class ComunicadorInterplanetarioTest {
 
-    @Test
-    void testContarVocales() {
-        assertEquals(13, ComunicadorInterplanetario.contarVocales("La Tierra es planeta más denso del Sistema Solar"));
-    }
 
-    @Test
-    void testInvertirMensaje() {
-        assertEquals("raloS ametS leD osned sám atenalp se arreiT aL", ComunicadorInterplanetario.invertirMensaje("La Tierra es planeta más denso del Sistema Solar"));
-    }
+        @Test
+        void testContarVocales() {
+            assertEquals(13, ComunicadorInterplanetario.contarVocales("La Tierra es planeta más denso del Sistema Solar"));
+        }
 
-    @Test
-    void testEsPalindromo() {
-        assertFalse(ComunicadorInterplanetario.esPalindromo("La Tierra es planeta más denso del Sistema Solar"));
-        assertTrue(ComunicadorInterplanetario.esPalindromo("Anita lava la tina"));
-    }
+        @Test
+        void testInvertirMensaje() {
+            assertEquals("laroS am odsen atnem anetnal saerrT aL", ComunicadorInterplanetario.invertirMensaje("La Tierra es planeta más denso del Sistema Solar"));
+        }
+
+        @Test
+        void testEsPalindromo() {
+            assertFalse(ComunicadorInterplanetario.esPalindromo("La Tierra es planeta más denso del Sistema Solar"));
+            // Asegúrate de que el caso de prueba refleje correctamente un palíndromo verificable después de normalización.
+            assertTrue(ComunicadorInterplanetario.esPalindromo("Anita lava la tina"));
+        }
 
     // manejo de excepciones
     public static int contarVocales(String mensaje) {
-        if (mensaje == null) throw new IllegalArgumentException("El mensaje no puede ser nulo.");
-        // Resto de la implementación...
-        return 0;
+        if (mensaje == null) {
+            throw new IllegalArgumentException("El mensaje no puede ser nulo.");
+        }
+        int contador = 0;
+        String mensajeMinuscula = mensaje.toLowerCase();
+        for (int i = 0; i < mensajeMinuscula.length(); i++) {
+            char c = mensajeMinuscula.charAt(i);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contador++;
+            }
+        }
+        return contador;
     }
-
-
 }
-
-
-
-
-
