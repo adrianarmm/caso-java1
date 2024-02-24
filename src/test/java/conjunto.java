@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
 public class conjunto {
+    public static void conjunto (String[] args) {
     Scanner scanner = new Scanner(System.in);
         while (true) {
         System.out.println("\nBienvenido al Software Integral de la Misión Espacial");
@@ -42,6 +43,7 @@ public class conjunto {
 
         }
     }
+}
 }
 
 
