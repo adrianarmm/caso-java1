@@ -1,6 +1,7 @@
 
 // implementacion de pruebas unitarias con JUnit
 import org.junit.jupiter.api.Test;
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 // ejercicio 1
@@ -31,8 +32,8 @@ class RecursosySuministrosTest {
 
         @Test
         void testVerificarAlerta() {
-            double[] consumo = {250, 100, 75};
-            assertTrue(RecursosySuministros.verificarAlerta(consumo, 500, 200, 150));
+            double[] consumo = {7.5, 2.5, 4.2};
+            assertFalse(RecursosySuministros.verificarAlerta(consumo, 500, 200, 150));
 
         }
 
@@ -50,6 +51,128 @@ class RecursosySuministrosTest {
 
         return new double[0];
     }
+}
+
+// ejercicio 3
+// implementacion de pruebas unitarias con JUnit
+
+
+class SistemaMonitoreoTest {
+
+    @Test
+    void testEsPrimo() {
+        assertTrue(SistemaMonitoreo.esPrimo(5));
+        assertFalse(SistemaMonitoreo.esPrimo(4));
+    }
+
+    @Test
+    void testListarPrimerosNPrimos() {
+        assertEquals(List.of(2, 3, 5, 7, 11), SistemaMonitoreo.listarPrimerosNPrimos(5));
+    }
+
+    @Test
+    void testDescomponerEnFactoresPrimos() {
+        assertEquals(List.of(2, 2, 3, 5), SistemaMonitoreo.descomponerEnFactoresPrimos(60));
+    }
+
+    // manejo de excepciones
 
 }
+
+// ejercicio 4
+// implementacion de pruebas unitarias con JUnit
+
+class PlanificadordeTareasTest {
+
+    @Test
+    void testProductoEscalar() {
+        int[] tareas = {2, 3, 2};
+        int[] horas = {5, 5, 5};
+        assertEquals(35, PlanificadordeTareas.productoEscalar(tareas, horas));
+    }
+
+    // manejo de excepciones
+    private static int productoEscalar(int[] tareas, int[] horas) {
+        if (tareas == null || horas == null) {
+            throw new IllegalArgumentException("Los arreglos de tareas y horas no pueden ser nulos.");
+        }
+        if (tareas.length != horas.length) {
+            throw new IllegalArgumentException("Los arreglos de tareas y horas deben tener el mismo tamaño.");
+        }
+        int producto = 0;
+        for (int i = 0; i < tareas.length; i++) {
+            producto += tareas[i] * horas[i];
+        }
+        return producto;
+    }
+}
+
+// ejercicio 5
+// implementacion de pruebas unitarias con JUnit
+
+
+class NavegadorEstelarTest {
+
+    @Test
+    void testMultiplicarMatrices() {
+        int[][] a = {
+                {1, 2},
+                {3, 4}
+        };
+        int[][] b = {
+                {2, 0},
+                {1, 2}
+        };
+        int[][] esperado = {
+                {4, 4},
+                {10, 8}
+        };
+        assertArrayEquals(esperado, NavegadorEstelar.multiplicarMatrices(a, b));
+    }
+
+    // manejo de excepciones
+    public static int[][] multiplicarMatrices(int[][] a, int[][] b) {
+        int filasA = a.length;
+        int columnasA = a[0].length;
+        int filasB = b.length;
+
+        if (columnasA != filasB) {
+            throw new IllegalArgumentException("Las matrices no son compatibles para la multiplicación.");
+        }
+
+        int[][] resultado = new int[filasA][b[0].length];
+
+        // Lógica de multiplicación de matrices...
+
+        return resultado;
+    }
+}
+
+// ejercicio 6
+// implementacion de pruebas unitarias con JUnit
+
+class ComunicadorInterplanetarioTest {
+
+    @Test
+    void testContarVocales() {
+        assertEquals(13, ComunicadorInterplanetario.contarVocales("La Tierra es planeta más denso del Sistema Solar"));
+    }
+
+    @Test
+    void testInvertirMensaje() {
+        assertEquals("raloS ametS leD osned sám atenalp se arreiT aL", ComunicadorInterplanetario.invertirMensaje("La Tierra es planeta más denso del Sistema Solar"));
+    }
+
+    @Test
+    void testEsPalindromo() {
+        assertFalse(ComunicadorInterplanetario.esPalindromo("La Tierra es planeta más denso del Sistema Solar"));
+        assertTrue(ComunicadorInterplanetario.esPalindromo("Anita lava la tina"));
+    }
+
+
+}
+
+
+
+
 

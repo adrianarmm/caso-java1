@@ -41,7 +41,7 @@ public class SistemaMonitoreo {
         }
     }
 
-    private static void listarPrimerosNPrimos(int n) {
+    static short listarPrimerosNPrimos(int n) {
         List<Integer> primos = new ArrayList<>();
         int numero = 2;
         while (primos.size() < n) {
@@ -51,9 +51,10 @@ public class SistemaMonitoreo {
             }
             numero++;
         }
+        return 0;
     }
 
-    private static boolean esPrimo(int numero) {
+    static boolean esPrimo(int numero) {
         for (int i = 2; i <= numero / 2; i++) {
             if (numero % i == 0) {
                 return false;
@@ -61,7 +62,7 @@ public class SistemaMonitoreo {
         }
         return true;
     }
-    private static List<Integer> descomponerEnFactoresPrimos(int numero) {
+    static List<Integer> descomponerEnFactoresPrimos(int numero) {
         List<Integer> factores = new ArrayList<>();
         for (int i = 2; i <= numero; i++) {
             while (numero % i == 0) {
