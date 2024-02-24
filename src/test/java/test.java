@@ -169,6 +169,13 @@ class ComunicadorInterplanetarioTest {
         assertTrue(ComunicadorInterplanetario.esPalindromo("Anita lava la tina"));
     }
 
+    // manejo de excepciones
+    public static int contarVocales(String mensaje) {
+        if (mensaje == null) throw new IllegalArgumentException("El mensaje no puede ser nulo.");
+        // Resto de la implementación...
+        return 0;
+    }
+
 
 }
 
