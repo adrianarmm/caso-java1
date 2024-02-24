@@ -24,14 +24,14 @@ public class RecursosySuministros {
             System.out.println("Media de consumo diario: Agua = " + estadisticas[0] + " litros, Comida = " + estadisticas[1] + " kg, Oxígeno = " + estadisticas[2] + " m^3");
         }
 
-        private static double[] calcularConsumo(int dias, int personas) {
+        static double[] calcularConsumo(int dias, int personas) {
             double agua = CONSUMO_AGUA_DIA * dias * personas;
             double comida = CONSUMO_COMIDA_DIA * dias * personas;
             double oxigeno = CONSUMO_OXIGENO_DIA * dias * personas;
             return new double[]{agua, comida, oxigeno};
         }
 
-        private static void verificarAlerta(double[] consumo, int i, int i1, int i2) {
+        static boolean verificarAlerta(double[] consumo, int i, int i1, int i2) {
             double capacidadAgua = 500; // 500 litros
             double capacidadComida = 200; // 200 kg
             double capacidadOxigeno = 150; // 150 m^3
@@ -45,9 +45,10 @@ public class RecursosySuministros {
             } else {
                 System.out.println("Los niveles de recursos son seguros.");
             }
+            return false;
         }
 
-        private static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
+        static double[] calcularEstadisticas(double[] consumo, int dias, int personas) {
             // Corrección: Asegurar que el cálculo se hace correctamente
             double mediaAgua = consumo[0] / (dias * personas);
             double mediaComida = consumo[1] / (dias * personas);

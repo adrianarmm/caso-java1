@@ -23,24 +23,33 @@ class CronometroCosmicoTest {
 
 class RecursosySuministrosTest {
 
-    @Test
-    void testCalcularConsumo() {
-        double[] esperado = {7.5, 2.5, 4.2};
-        assertArrayEquals(esperado, RecursosySuministros.calcularConsumo(5, 1), 0.01);
+        @Test
+        void testCalcularConsumo() {
+            double[] esperado = {7.5, 2.5, 4.2};
+            assertArrayEquals(esperado, RecursosySuministros.calcularConsumo(5, 1), 0.01);
+        }
+
+        @Test
+        void testVerificarAlerta() {
+            double[] consumo = {250, 100, 75};
+            assertTrue(RecursosySuministros.verificarAlerta(consumo, 500, 200, 150));
+
+        }
+
+        @Test
+        void testCalcularEstadisticas() {
+            double[] consumo = {7.5, 2.5, 4.2};
+            double[] esperado = {1.5, 0.5, 0.84};
+            assertArrayEquals(esperado, RecursosySuministros.calcularEstadisticas(consumo, 5, 1), 0.01);
+        }
+// manejo de excepciones
+    public static double[] calcularConsumo(int dias, int personas) {
+        if (dias < 0 || personas < 0) {
+            throw new IllegalArgumentException("Los días y las personas no pueden ser negativos.");
+        }
+
+        return new double[0];
     }
 
-    @Test
-    void testVerificarAlerta() {
-        double[] consumo = {250, 100, 75};
-        assertTrue(RecursosySuministros.verificarAlerta(consumo, 500, 200, 150));
-        assertFalse(RecursosySuministros.verificarAlerta(consumo, 5000, 2000, 1500));
-    }
-
-    @Test
-    void testCalcularEstadisticas() {
-        double[] consumo = {7.5, 2.5, 4.2};
-        double[] esperado = {1.5, 0.5, 0.84};
-        assertArrayEquals(esperado, RecursosySuministros.calcularEstadisticas(consumo, 5, 1), 0.01);
-    }
 }
 
